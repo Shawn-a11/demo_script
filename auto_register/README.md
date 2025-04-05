@@ -1,30 +1,30 @@
-# 自动注册脚本
+# Automatic Registration Script
 
-这是一个自动化注册脚本，可以：
-1. 自动登录 Outlook 邮箱
-2. 打开指定网页并完成注册
-3. 自动获取验证码并填写
+This is an automated registration script that can:
+1. Automatically log in to Outlook email
+2. Open a specified webpage and complete registration
+3. Automatically retrieve and fill in verification codes
 
-## 功能特点
+## Features
 
-- 自动登录 Outlook
-- 自动获取验证码
-- 自动填写注册表单
-- 支持自定义注册页面
-- 包含错误处理机制
+- Automatic Outlook login
+- Automatic verification code retrieval
+- Automatic form filling
+- Support for custom registration pages
+- Error handling mechanism
 
-## 安装要求
+## Requirements
 
-1. Python 3.7 或更高版本
-2. Chrome 浏览器
-3. 安装依赖包：
+1. Python 3.7 or higher
+2. Chrome browser
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-## 使用方法
+## Usage
 
-1. 编辑 `.env` 文件，填入必要信息：
+1. Edit the `.env` file with your information:
    ```
    OUTLOOK_EMAIL=your_email@outlook.com
    OUTLOOK_PASSWORD=your_password
@@ -32,24 +32,24 @@
    REGISTRATION_URL=your_registration_url
    ```
 
-2. 运行脚本：
+2. Run the script:
    ```bash
    python auto_register.py
    ```
 
-## 注意事项
+## Notes
 
-- 请确保您的 Outlook 账号已启用 IMAP 访问
-- 脚本中的 CSS 选择器需要根据实际的注册页面进行调整
-- 验证码获取逻辑可能需要根据实际的邮件格式进行调整
-- 如果遇到验证码识别问题，可能需要手动处理
+- Ensure your Outlook account has IMAP access enabled
+- CSS selectors in the script need to be adjusted according to the actual registration page
+- Verification code retrieval logic may need to be adjusted based on the actual email format
+- Manual intervention may be required if verification code recognition fails
 
-## 安全提示
+## Security Tips
 
-- 请妥善保管您的账号密码
-- 不要将包含真实密码的 `.env` 文件分享给他人
-- 建议定期更改密码
+- Keep your account credentials secure
+- Do not share the `.env` file containing real passwords
+- Change passwords regularly
 
-## 自定义配置
+## Custom Configuration
 
-如果需要修改注册页面的元素选择器，请编辑 `auto_register.py` 文件中的 `register_account` 函数，根据实际的页面元素修改相应的 CSS 选择器。 
+To modify the registration page element selectors, edit the `register_account` function in `auto_register.py` and adjust the CSS selectors according to the actual page elements.
